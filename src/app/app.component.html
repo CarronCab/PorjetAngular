@@ -1,16 +1,15 @@
 <mat-toolbar>
-  <h5>FILMOTEX</h5>
   <nav>
-    <button mat-button [matMenuTriggerFor]="bestRatedFilms">
-      Best Rated Movies
+    <button routerLink="/bestRatedFilms" routerLinkActive="active">
+      Best rated movies
     </button>
-    <button mat-button [matMenuTriggerFor]="upComingFilms">
-      Upcoming Movies
+    <button routerLink="/upComingFilms" routerLinkActive="active">
+      Upcoming movies
     </button>
-    <button mat-button [matMenuTriggerFor]="nowPlayingFilms">
-      Now Playing Movies
+    <button routerLink="/nowPlayingFilms" routerLinkActive="active">
+      Now playing movies
     </button>
-    <button mat-button [matMenuTriggerFor]="popularFilms">
+    <button routerLink="/popularFilms" routerLinkActive="active">
       Popular Movies
     </button>
   </nav>
