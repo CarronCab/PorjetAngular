@@ -1,22 +1,22 @@
 <mat-toolbar>
   <nav>
-    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" *ngIf="!(router.url === '/')">
+    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active">
       Accueil
     </button>
-    <button mat-raised-button routerLink="/bestRatedFilms" routerLinkActive="active">
+    <button mat-button routerLink="/bestRatedFilms" routerLinkActive="active">
       Films les mieux notés
     </button>
-    <button mat-raised-button routerLink="/upComingFilms" routerLinkActive="active">
+    <button mat-button routerLink="/upComingFilms" routerLinkActive="active">
       Sorties à venir
     </button>
-    <button mat-raised-button routerLink="/nowPlayingFilms" routerLinkActive="active">
+    <button mat-button routerLink="/nowPlayingFilms" routerLinkActive="active">
       Actuellement en salle
     </button>
-    <button mat-raised-button routerLink="/popularFilms" routerLinkActive="active">
+    <button mat-button routerLink="/popularFilms" routerLinkActive="active">
       Films les plus populaires
     </button>
     <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
+      <mat-label>Rechercher</mat-label>
       <label>
         <input matInput placeholder="Placeholder">
       </label>
