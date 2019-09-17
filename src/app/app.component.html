@@ -1,18 +1,34 @@
 <mat-toolbar>
   <nav>
-    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active">
+    <button mat-flat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" color="primary"
+            *ngIf="router.url === '/'">
       Accueil
     </button>
-    <button mat-button routerLink="/bestRatedFilms" routerLinkActive="active">
+    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" *ngIf="!(router.url === '/')">
+      Accueil
+    </button>
+    <button mat-flat-button color="primary" *ngIf="router.url === '/bestRatedFilms'">
       Films les mieux notés
     </button>
-    <button mat-button routerLink="/upComingFilms" routerLinkActive="active">
+    <button mat-button routerLink="/bestRatedFilms" routerLinkActive="active" *ngIf="!(router.url === '/bestRatedFilms')">
+      Films les mieux notés
+    </button>
+    <button mat-flat-button color="primary" *ngIf="router.url === '/upComingFilms'">
       Sorties à venir
     </button>
-    <button mat-button routerLink="/nowPlayingFilms" routerLinkActive="active">
+    <button mat-button routerLink="/upComingFilms" routerLinkActive="active" *ngIf="!(router.url === '/upComingFilms')">
+      Sorties à venir
+    </button>
+    <button mat-flat-button color="primary" *ngIf="router.url === '/nowPlayingFilms'">
       Actuellement en salle
     </button>
-    <button mat-button routerLink="/popularFilms" routerLinkActive="active">
+    <button mat-button routerLink="/nowPlayingFilms" routerLinkActive="active" *ngIf="!(router.url === '/nowPlayingFilms')">
+      Actuellement en salle
+    </button>
+    <button mat-flat-button color="primary" *ngIf="router.url === '/popularFilms'">
+      Films les plus populaires
+    </button>
+    <button mat-button routerLink="/popularFilms" routerLinkActive="active" *ngIf="!(router.url === '/popularFilms')">
       Films les plus populaires
     </button>
     <mat-form-field appearance="outline">
