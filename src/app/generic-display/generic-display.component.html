@@ -1,7 +1,6 @@
 <mat-card class="card">
   <mat-card-header>
-    <div mat-card-avatar class="header-image"></div>
-    <mat-card-title>{{ film.title }}</mat-card-title>
+    <mat-card-title style="font-size: 100%">{{ film.title }}</mat-card-title>
     <mat-card-subtitle *ngFor="let genre of film.genres">{{
       genre.name
     }}</mat-card-subtitle>
@@ -15,8 +14,7 @@
       {{ film.overview }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>DETAILS</button>
-    <button mat-button>SHARE</button>
+  <mat-card-actions style="text-align:center;">
+    <button mat-button >Détails</button>
   </mat-card-actions>
 </mat-card>
