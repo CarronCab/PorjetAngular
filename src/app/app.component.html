@@ -15,7 +15,12 @@
     <button mat-raised-button routerLink="/popularFilms" routerLinkActive="active">
       Films les plus populaires
     </button>
-
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <!--<input matInput placeholder="Placeholder">-->
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-hint>Rechercher</mat-hint>
+    </mat-form-field>
   </nav>
 </mat-toolbar>
 <router-outlet></router-outlet>
