@@ -31,6 +31,7 @@ import {
   MatLineModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   imports: [
@@ -66,7 +67,8 @@ import { HttpClientModule } from '@angular/common/http';
     BestRatedFilmsComponent,
     UpcomingFilmsComponent,
     NowPlayingFilmsComponent,
-    PopularFilmsComponent
+    PopularFilmsComponent,
+    CategoryComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
