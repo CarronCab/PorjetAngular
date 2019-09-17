@@ -20,11 +20,11 @@
     <button mat-button routerLink="/upComingFilms" routerLinkActive="active" *ngIf="!(router.url === '/upComingFilms')">
       Sorties à venir
     </button>
-    <button mat-flat-button color="primary" *ngIf="router.url === '/nowPlayingFilms'">
-      Actuellement en salle
+    <button mat-flat-button color="primary" *ngIf="router.url === '/category'">
+      Catégories
     </button>
-    <button mat-button routerLink="/nowPlayingFilms" routerLinkActive="active" *ngIf="!(router.url === '/nowPlayingFilms')">
-      Actuellement en salle
+    <button mat-button routerLink="/category" routerLinkActive="active" *ngIf="!(router.url === '/category')">
+      Catégories
     </button>
     <button mat-flat-button color="primary" *ngIf="router.url === '/popularFilms'">
       Films les plus populaires

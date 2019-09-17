@@ -7,6 +7,7 @@ import { NowPlayingFilmsComponent } from './now-playing-films/now-playing-films.
 import { UpcomingFilmsComponent } from './upcoming-films/upcoming-films.component';
 import { BestRatedFilmsComponent } from './best-rated-films/best-rated-films.component';
 import { DetailComponent } from './detail/detail.component';
+import {CategoryComponent} from './category/category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'popularFilms', component: PopularFilmsComponent },
   { path: 'nowPlayingFilms', component: NowPlayingFilmsComponent },
   { path: 'details/:id', component: DetailComponent },
+  { path: 'category', component: CategoryComponent },
 
   { path: '**', component: PageNotFoundComponent }
 ];

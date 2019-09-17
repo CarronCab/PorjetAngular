@@ -29,6 +29,7 @@ import {
   MatIconModule,
   MatTooltipModule, MatLineModule
 } from '@angular/material';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   imports: [
@@ -63,7 +64,8 @@ import {
     BestRatedFilmsComponent,
     UpcomingFilmsComponent,
     NowPlayingFilmsComponent,
-    PopularFilmsComponent
+    PopularFilmsComponent,
+    CategoryComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
