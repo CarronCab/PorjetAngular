@@ -4,7 +4,7 @@
             *ngIf="router.url === '/'">
       Accueil
     </button>
-    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" *ngIf="!(router.url === '/')">
+    <button mat-button title="Retour à l'accueil" routerLink="" id="toolbar-button" routerLinkActive="active" *ngIf="!(router.url === '/')">
       Accueil
     </button>
     <button mat-flat-button color="primary" *ngIf="router.url === '/bestRatedFilms'">
@@ -34,10 +34,9 @@
     <mat-form-field appearance="outline">
       <mat-label>Rechercher</mat-label>
       <label>
-        <input matInput placeholder="Placeholder">
+        <input matInput placeholder="Films, Series, TV Show...">
       </label>
       <mat-icon matSuffix>search</mat-icon>
-      <mat-hint>Rechercher</mat-hint>
     </mat-form-field>
   </nav>
 </mat-toolbar>
