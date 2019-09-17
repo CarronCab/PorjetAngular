@@ -1,7 +1,7 @@
 <mat-toolbar>
   <nav>
-    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active">
-      <mat-icon>arrow_back</mat-icon>
+    <button mat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" *ngIf="!(router.url === '/')">
+      Accueil
     </button>
     <button mat-raised-button routerLink="/bestRatedFilms" routerLinkActive="active">
       Films les mieux notés

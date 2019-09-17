@@ -27,7 +27,7 @@ import {
   MatCardModule,
   MatDialogModule,
   MatIconModule,
-  MatTooltipModule
+  MatTooltipModule, MatLineModule
 } from '@angular/material';
 
 @NgModule({
@@ -51,7 +51,8 @@ import {
     MatSelectModule,
     MatTooltipModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatLineModule
   ],
   declarations: [
     AppComponent,
