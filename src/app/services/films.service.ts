@@ -1,15 +1,13 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { Popular } from "./popular.interface";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class FilmsService {
-  public URL = "https://api.themoviedb.org/3/movie/";
-  public TOKEN = "aa031ed471a4250c5a6cc55678ff4083";
+  public URL = 'https://api.themoviedb.org/3/movie/';
+  public TOKEN = 'aa031ed471a4250c5a6cc55678ff4083';
   public LANGUAGE = `&language=fr-FR`;
 
   constructor(private httpClient: HttpClient) {}
