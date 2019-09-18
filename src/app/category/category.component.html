@@ -1,1 +1,12 @@
-<p>category works!</p>
+<mat-grid-list cols="7" rowHeight="2:3">
+  <mat-grid-tile *ngFor="let genre of genres[0]">
+    <img
+      class="tile_image"
+      src="https://image.tmdb.org/t/p/w500/{{ genre.poster }}"
+      alt="{{ genre.id }}"/>
+    <mat-grid-tile-footer>
+      <button>{{ genre.name }}</button>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
