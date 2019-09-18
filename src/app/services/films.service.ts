@@ -1,16 +1,20 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { Popular } from "./popular.interface";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Popular } from './popular.interface';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class FilmsService {
-  public URL = "https://api.themoviedb.org/3/movie/";
-  public TOKEN = "aa031ed471a4250c5a6cc55678ff4083";
+  public URL = 'https://api.themoviedb.org/3/movie/';
+  public URL_CATEGORIES = 'https://api.themoviedb.org/3/'
+  public TOKEN = 'aa031ed471a4250c5a6cc55678ff4083';
   public LANGUAGE = `&language=fr-FR`;
+  public URL_MOVIES_BY_CATEGORIES = `https://api.themoviedb.org/3/discover/movie?api_key=`;
+  public GENRE = `&with_genres=`;
+  public OPTION = `&sort_by=popularity.desc`;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -34,6 +38,16 @@ export class FilmsService {
   getUpcoming(): Observable<any> {
     return this.httpClient.get(
       this.URL + `upcoming?api_key=` + this.TOKEN + this.LANGUAGE
+    );
+  }
+  getCategories(): Observable<any> {
+    return this.httpClient.get(
+      this.URL_CATEGORIES + `genre/movie/list?api_key=` + this.TOKEN + this.LANGUAGE
+    );
+  }
+  getTheMostPopularMovieByCategories(genre: string): Observable<any> {
+    return this.httpClient.get(
+      this.URL_MOVIES_BY_CATEGORIES + this.TOKEN + this.LANGUAGE + this.GENRE + genre + this.OPTION
     );
   }
 }
