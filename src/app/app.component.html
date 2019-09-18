@@ -1,41 +1,90 @@
 <mat-toolbar>
-  <img class="logo" src="../assets/img/popcorn.png" alt="Popcorn">
+  <img class="logo" src="../assets/img/popcorn.png" alt="Popcorn" />
   <nav>
-    <button mat-flat-button title="Retour à l'accueil" routerLink="" routerLinkActive="active" color="primary"
-            *ngIf="router.url === '/'">
+    <button
+      mat-flat-button
+      title="Retour à l'accueil"
+      routerLink=""
+      routerLinkActive="active"
+      style="background-color: #515151;"
+      *ngIf="router.url === '/'"
+    >
       Accueil
     </button>
-    <button mat-button title="Retour à l'accueil" routerLink="" id="toolbar-button" routerLinkActive="active" *ngIf="!(router.url === '/')">
+    <button
+      mat-button
+      title="Retour à l'accueil"
+      routerLink=""
+      id="toolbar-button"
+      routerLinkActive="active"
+      *ngIf="!(router.url === '/')"
+    >
       Accueil
     </button>
-    <button mat-flat-button color="primary" *ngIf="router.url === '/bestRatedFilms'">
+    <button
+      mat-flat-button
+      style="background-color: #515151;"
+      *ngIf="router.url === '/bestRatedFilms'"
+    >
       Films les mieux notés
     </button>
-    <button mat-button routerLink="/bestRatedFilms" routerLinkActive="active" *ngIf="!(router.url === '/bestRatedFilms')">
+    <button
+      mat-button
+      routerLink="/bestRatedFilms"
+      routerLinkActive="active"
+      *ngIf="!(router.url === '/bestRatedFilms')"
+    >
       Films les mieux notés
     </button>
-    <button mat-flat-button color="primary" *ngIf="router.url === '/upComingFilms'">
+    <button
+      mat-flat-button
+      style="background-color: #515151;"
+      *ngIf="router.url === '/upComingFilms'"
+    >
       Sorties à venir
     </button>
-    <button mat-button routerLink="/upComingFilms" routerLinkActive="active" *ngIf="!(router.url === '/upComingFilms')">
+    <button
+      mat-button
+      routerLink="/upComingFilms"
+      routerLinkActive="active"
+      *ngIf="!(router.url === '/upComingFilms')"
+    >
       Sorties à venir
     </button>
-    <button mat-flat-button color="primary" *ngIf="router.url === '/category'">
+    <button
+      mat-flat-button
+      style="background-color: #515151;"
+      *ngIf="router.url === '/category'"
+    >
       Catégories
     </button>
-    <button mat-button routerLink="/category" routerLinkActive="active" *ngIf="!(router.url === '/category')">
+    <button
+      mat-button
+      routerLink="/category"
+      routerLinkActive="active"
+      *ngIf="!(router.url === '/category')"
+    >
       Catégories
     </button>
-    <button mat-flat-button color="primary" *ngIf="router.url === '/popularFilms'">
+    <button
+      mat-flat-button
+      style="background-color: #515151;"
+      *ngIf="router.url === '/popularFilms'"
+    >
       Films les plus populaires
     </button>
-    <button mat-button routerLink="/popularFilms" routerLinkActive="active" *ngIf="!(router.url === '/popularFilms')">
+    <button
+      mat-button
+      routerLink="/popularFilms"
+      routerLinkActive="active"
+      *ngIf="!(router.url === '/popularFilms')"
+    >
       Films les plus populaires
     </button>
     <mat-form-field appearance="outline">
       <mat-label>Rechercher</mat-label>
       <label>
-        <input matInput placeholder="Films, Series, TV Show...">
+        <input matInput placeholder="Films, Series, TV Show..." />
       </label>
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>

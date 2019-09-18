@@ -27,6 +27,8 @@ export interface Film {
 }
 
 export interface Genre {
+  poster: string;
+  length: number;
   id: number;
   name: string;
 }
@@ -46,4 +48,8 @@ export interface ProductCountry {
 export interface SpokenLanguage {
   iso_639_1: string;
   name: string;
+}
+
+export interface Categories {
+  genres: object;
 }
