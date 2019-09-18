@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../services/film.interface';
 import { FilmsService } from '../services/films.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-best-rated-films',
@@ -9,7 +10,7 @@ import { FilmsService } from '../services/films.service';
 })
 export class BestRatedFilmsComponent implements OnInit {
   bestrated: Film[] = [];
-  constructor(private filmService: FilmsService) {}
+  constructor(private filmService: FilmsService, private router: Router) {}
 
   ngOnInit() {
     this.filmService.getBestRated().subscribe((res: any) => {
@@ -20,5 +21,9 @@ export class BestRatedFilmsComponent implements OnInit {
         this.bestrated.push(element);
       });
     });
+  }
+
+  viewDetail(filmId: number) {
+    this.router.navigate([`/details/${filmId}`]);
   }
 }
