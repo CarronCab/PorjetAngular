@@ -34,4 +34,10 @@ export class FilmsService {
       this.URL + `upcoming?api_key=` + this.TOKEN + this.LANGUAGE
     );
   }
+
+  getMovie(movieId: number): Observable<any> {
+    return this.httpClient.get(
+      this.URL + `${movieId}?api_key=` + this.TOKEN + this.LANGUAGE
+    );
+  }
 }
