@@ -23,6 +23,10 @@ export class DetailComponent implements OnInit {
     this.filmService.getMovie(this.filmId).subscribe((res: any) => {
       this.actualMovie = res;
       console.log(this.actualMovie);
+      this.filmService.getVideo(this.filmId).subscribe((res2: any) => {
+        this.actualVideo = res2;
+        console.log(this.actualVideo);
+      });
       this.loaded = true;
     });
   }

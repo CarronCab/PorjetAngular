@@ -40,4 +40,10 @@ export class FilmsService {
       this.URL + `${movieId}?api_key=` + this.TOKEN + this.LANGUAGE
     );
   }
+
+  getVideo(movieId: number): Observable<any> {
+    return this.httpClient.get(
+      this.URL + `${movieId}/videos?api_key=` + this.TOKEN + this.LANGUAGE
+    );
+  }
 }
