@@ -28,7 +28,7 @@ import {
   MatDialogModule,
   MatIconModule,
   MatTooltipModule,
-  MatLineModule
+  MatLineModule, MatGridListModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
@@ -56,7 +56,8 @@ import { CategoryComponent } from './category/category.component';
     MatSidenavModule,
     MatCardModule,
     MatLineModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   declarations: [
     AppComponent,
