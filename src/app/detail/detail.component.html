@@ -1,1 +1,8 @@
-<p *ngIf="loaded === true">{{actualMovie.title}}</p>
+<div class="detail-content-container" *ngIf="loaded === true">
+  <h2>{{actualMovie.title}}</h2>
+  <p *ngFor="let genre of actualMovie.genres">{{genre.name}}</p>
+  <p>{{actualMovie.vote_average}}/10</p>
+  <video controls width="50%">
+    <source src="https://api.themoviedb.org/3/movie/{{filmId}}/videos/results/key?api_key=aa031ed471a4250c5a6cc55678ff4083&language=fr-FR">
+  </video>
+</div>

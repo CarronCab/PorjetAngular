@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FilmsService } from '../services/films.service';
 import { ActivatedRoute } from '@angular/router';
 import { Film } from '../services/film.interface';
+import { Video } from '../services/video.interface';
 
 @Component({
   selector: 'app-detail',
@@ -11,6 +12,7 @@ import { Film } from '../services/film.interface';
 export class DetailComponent implements OnInit {
 
   actualMovie: Film;
+  actualVideo: Video;
   loaded = false;
 
   filmId = this.route.snapshot.params.id;
