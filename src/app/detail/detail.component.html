@@ -2,7 +2,7 @@
   <h2>{{actualMovie.title}}</h2>
   <p *ngFor="let genre of actualMovie.genres">{{genre.name}}</p>
   <p>{{actualMovie.vote_average}}/10</p>
-  <video controls width="50%">
-    <source src="https://api.themoviedb.org/3/movie/{{filmId}}/videos/results/key?api_key=aa031ed471a4250c5a6cc55678ff4083&language=fr-FR">
-  </video>
+  <iframe width="50%"
+          src="https://www.youtube.com/watch?v={{actualVideo.results[0].key}}" allowfullscreen>
+  </iframe>
 </div>

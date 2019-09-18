@@ -25,7 +25,7 @@ export class DetailComponent implements OnInit {
       console.log(this.actualMovie);
       this.filmService.getVideo(this.filmId).subscribe((res2: any) => {
         this.actualVideo = res2;
-        console.log(this.actualVideo);
+        console.log(this.actualVideo.results[0].key);
       });
       this.loaded = true;
     });
