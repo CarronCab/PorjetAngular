@@ -6,3 +6,8 @@
   height: 100%;
 }
 
+mat-grid-tile {
+  cursor: pointer;
+}
+
+

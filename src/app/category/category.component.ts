@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Genre, Categories} from '../services/film.interface';
 import {FilmsService} from '../services/films.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -12,7 +13,7 @@ export class CategoryComponent implements OnInit {
   genres: Genre[] = [];
   genre: string;
 
-  constructor(private filmService: FilmsService) {
+  constructor(private filmService: FilmsService, private router: Router) {
   }
 
   ngOnInit() {
@@ -29,5 +30,9 @@ export class CategoryComponent implements OnInit {
         });
       }
     });
+  }
+
+  viewDetail(genreId: number) {
+    this.router.navigate([`/genre/${genreId}`]);
   }
 }

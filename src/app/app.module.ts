@@ -32,6 +32,7 @@ import {
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
+import { GenreComponent } from './genre/genre.component';
 
 @NgModule({
   imports: [
@@ -69,7 +70,8 @@ import { CategoryComponent } from './category/category.component';
     UpcomingFilmsComponent,
     NowPlayingFilmsComponent,
     PopularFilmsComponent,
-    CategoryComponent
+    CategoryComponent,
+    GenreComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

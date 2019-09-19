@@ -8,6 +8,7 @@ import { UpcomingFilmsComponent } from './upcoming-films/upcoming-films.componen
 import { BestRatedFilmsComponent } from './best-rated-films/best-rated-films.component';
 import { DetailComponent } from './detail/detail.component';
 import {CategoryComponent} from './category/category.component';
+import {GenreComponent} from './genre/genre.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'nowPlayingFilms', component: NowPlayingFilmsComponent },
   { path: 'details/:id', component: DetailComponent },
   { path: 'category', component: CategoryComponent },
+  { path: 'genre/:id', component: GenreComponent},
 
   { path: '**', component: PageNotFoundComponent }
 ];

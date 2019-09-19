@@ -60,4 +60,9 @@ export class FilmsService {
       this.URL_MOVIES_BY_CATEGORIES + this.TOKEN + this.LANGUAGE + this.GENRE + genre + this.OPTION
     );
   }
+  getCategory(genreId: number): Observable<any>{
+    return this.httpClient.get(
+      this.URL_CATEGORIES + `genre/movie/list?api_key=` + this.TOKEN + this.LANGUAGE + `&with_genre=` + genreId
+    );
+  }
 }

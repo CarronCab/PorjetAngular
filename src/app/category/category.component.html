@@ -1,5 +1,5 @@
 <mat-grid-list cols="7" rowHeight="2:3">
-  <mat-grid-tile *ngFor="let genre of genres[0]">
+  <mat-grid-tile *ngFor="let genre of genres[0]" (click)="viewDetail(genre.id)">
     <img
       class="tile_image"
       src="https://image.tmdb.org/t/p/w500/{{ genre.poster }}"
