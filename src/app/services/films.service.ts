@@ -13,6 +13,7 @@ export class FilmsService {
   public URL_MOVIES_BY_CATEGORIES = `https://api.themoviedb.org/3/discover/movie?api_key=`;
   public GENRE = `&with_genres=`;
   public OPTION = `&sort_by=popularity.desc`;
+  public URL_SEARCH = 'https://api.themoviedb.org/3/search/movie?api_key=';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -63,6 +64,11 @@ export class FilmsService {
   getCategory(genreId: number): Observable<any>{
     return this.httpClient.get(
       this.URL_CATEGORIES + `genre/movie/list?api_key=` + this.TOKEN + this.LANGUAGE + `&with_genre=` + genreId
+    );
+  }
+  getMovies(){
+    return this.httpClient.get(
+      this.URL_SEARCH + this.TOKEN + this.OPTION + `&language=en-US&page=1&include_adult=false`
     );
   }
 }
