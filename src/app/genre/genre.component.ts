@@ -43,4 +43,8 @@ export class GenreComponent implements OnInit {
   viewDetail(filmId: number) {
     this.router.navigate([`/details/${filmId}`]);
   }
+
+  goBack() {
+    this.router.navigate([`/category`]);
+  }
 }

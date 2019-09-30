@@ -13,6 +13,27 @@ mat-grid-tile {
 .genre {
   color: white;
   font-weight: bolder;
+  margin: 2%;
+}
+
+.return_button{
+  height: 7%;
+  width: 5%;
   margin: 3%;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.grid_item_2 {
+  text-align: center;
+}
+
+.grid-item_1 {
+  text-align: left;
 }
 

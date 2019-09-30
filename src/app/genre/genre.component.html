@@ -1,4 +1,14 @@
-<p class="genre"> {{genre}}</p>
+<div class="grid-container">
+  <div class="grid-item_1">
+    <img class="return_button"
+         src="../../assets/img/popcorn.png"
+         alt="retour"
+         (click)=goBack()>
+  </div>
+  <div class="grid-item_2">
+    <p class="genre"> {{genre}}</p>
+  </div>
+</div>
 
 <mat-grid-list cols="7" rowHeight="2:3">
   <mat-grid-tile *ngFor="let film of films" (click)="viewDetail(film.id)">
