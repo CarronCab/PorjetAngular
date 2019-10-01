@@ -9,6 +9,7 @@ import { BestRatedFilmsComponent } from './best-rated-films/best-rated-films.com
 import { DetailComponent } from './detail/detail.component';
 import {CategoryComponent} from './category/category.component';
 import {GenreComponent} from './genre/genre.component';
+import {SearchComponent} from './search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'details/:id', component: DetailComponent },
   { path: 'category', component: CategoryComponent },
   { path: 'genre/:id', component: GenreComponent},
+  { path: 'search', component: SearchComponent},
 
   { path: '**', component: PageNotFoundComponent }
 ];

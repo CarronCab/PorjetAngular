@@ -33,6 +33,8 @@ import {
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
 import { GenreComponent } from './genre/genre.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
@@ -58,7 +60,8 @@ import { GenreComponent } from './genre/genre.component';
     MatCardModule,
     MatLineModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -71,7 +74,8 @@ import { GenreComponent } from './genre/genre.component';
     NowPlayingFilmsComponent,
     PopularFilmsComponent,
     CategoryComponent,
-    GenreComponent
+    GenreComponent,
+    SearchComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

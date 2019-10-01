@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnChanges, SimpleChanges} from '@angular/core';
+import {Router} from '@angular/router';
+import {FormControl, Validators} from '@angular/forms';
+import {FilmsService} from './services/films.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,17 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'projetWeb';
+  keyWord = new FormControl('', Validators.required);
 
-  constructor(public router: Router) {
+  constructor(public router: Router, private filmService: FilmsService) {
 
+  }
+
+  onAmountChange(event: any) {
+    this.router.navigate(['/'], {queryParams: {keyWord: this.keyWord.value}});
+  }
+
+  isHomeRoute() {
+    return (this.router.url === '/category' || this.router.url.includes('/genre/'));
   }
 }

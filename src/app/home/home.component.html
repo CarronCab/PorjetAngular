@@ -1,5 +1,11 @@
+<div class="category_header" *ngIf="keyWord">
+  <p>Résultat pour :
+  <span class="genre"> {{keyWord}}</span>
+  </p>
+</div>
+
 <mat-grid-list cols="7" rowHeight="2:3">
-  <mat-grid-tile *ngFor="let film of nowplaying">
+  <mat-grid-tile *ngFor="let film of popular">
     <img
       class="tile_image"
       src="https://image.tmdb.org/t/p/w500/{{ film.poster_path }}"
@@ -10,3 +16,4 @@
     </mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
+

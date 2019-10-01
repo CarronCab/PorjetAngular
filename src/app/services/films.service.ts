@@ -66,9 +66,9 @@ export class FilmsService {
       this.URL_CATEGORIES + `genre/movie/list?api_key=` + this.TOKEN + this.LANGUAGE + `&with_genre=` + genreId
     );
   }
-  getMovies(){
+  getMovies(value: string){
     return this.httpClient.get(
-      this.URL_SEARCH + this.TOKEN + this.OPTION + `&language=en-US&page=1&include_adult=false`
+      this.URL_SEARCH + this.TOKEN + this.OPTION + `&language=fr-FR&page=1&include_adult=false` + `&query=` + value
     );
   }
 }
