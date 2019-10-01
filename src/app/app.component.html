@@ -7,7 +7,7 @@
       routerLink=""
       routerLinkActive="active"
       style="background-color: #515151;"
-      *ngIf="router.url === '/'"
+      *ngIf="router.url === '/' ||router.url.includes('keyWord')"
     >
       Accueil
     </button>
@@ -17,7 +17,7 @@
       routerLink=""
       id="toolbar-button"
       routerLinkActive="active"
-      *ngIf="!(router.url === '/')"
+      *ngIf="!(router.url === '/' ||router.url.includes('keyWord'))"
     >
       Accueil
     </button>
