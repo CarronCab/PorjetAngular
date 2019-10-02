@@ -2,7 +2,7 @@
   <h2>{{actualMovie.title}}</h2>
   <p *ngFor="let genre of actualMovie.genres">{{genre.name}}</p>
   <p>{{actualMovie.vote_average}}/10</p>
-  <iframe width="50%"
-          src="https://www.youtube.com/watch?v={{actualVideo.results[0].key}}" allowfullscreen>
-  </iframe>
+  <youtube-player
+    [videoId]="actualVideo.results[0].key" width="50%"
+  ></youtube-player>
 </div>

@@ -35,6 +35,7 @@ import { CategoryComponent } from './category/category.component';
 import { GenreComponent } from './genre/genre.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { SearchComponent } from './search/search.component';
     MatLineModule,
     HttpClientModule,
     MatGridListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   declarations: [
     AppComponent,
