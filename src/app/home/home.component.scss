@@ -4,6 +4,7 @@
 
 .tile_image {
   height: 100%;
+  cursor: pointer;
 }
 
 .home_header {
@@ -27,5 +28,9 @@ span{
 
 p {
   color: white;
+}
+
+.mat-grid-tile:hover .tile_image {
+  opacity: 0.6;
 }
 

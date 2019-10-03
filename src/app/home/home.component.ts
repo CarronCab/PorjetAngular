@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     };
     this.mySubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Trick the Router into believing it's last link wasn't previously loaded
         this.router.navigated = false;
       }
     });
@@ -37,12 +36,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       .queryParams
       .subscribe(params => {
           this.keyWord = params.keyWord;
-          console.log('mot cles   ' + this.keyWord);
         }
       );
 
     if (!this.keyWord) {
-      console.log('1');
       this.filmService.getPopular().subscribe((res: any) => {
         const data = res.results;
         data.forEach(element => {
@@ -52,13 +49,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       this.popular.length = 0;
       this.popular = [];
-      console.log('2');
       this.filmService.getMovies(this.keyWord).subscribe((res: any) => {
         const data = res.results;
         data.forEach(element => {
           this.popular.push(element);
         });
-        console.log(this.popular);
       });
     }
   }

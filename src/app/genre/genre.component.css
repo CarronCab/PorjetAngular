@@ -4,6 +4,7 @@
 
 .tile_image {
   height: 100%;
+  cursor: pointer;
 }
 
 mat-grid-tile {
