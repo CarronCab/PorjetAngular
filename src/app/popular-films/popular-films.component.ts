@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../services/film.interface';
 import { FilmsService } from '../services/films.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-popular-films',
@@ -9,7 +10,7 @@ import { FilmsService } from '../services/films.service';
 })
 export class PopularFilmsComponent implements OnInit {
   popular: Film[] = [];
-  constructor(private filmService: FilmsService) {}
+  constructor(private filmService: FilmsService, private router: Router) {}
 
   ngOnInit() {
     this.filmService.getPopular().subscribe((res: any) => {
@@ -19,5 +20,8 @@ export class PopularFilmsComponent implements OnInit {
         this.popular.push(element);
       });
     });
+  }
+  viewDetail(filmId: number) {
+    this.router.navigate([`/details/${filmId}`]);
   }
 }

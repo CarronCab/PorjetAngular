@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Film } from '../services/film.interface';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-generic-display',
@@ -9,9 +10,13 @@ import { Film } from '../services/film.interface';
 export class GenericDisplayComponent implements OnInit {
   @Input() film: Film;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     console.log(this.film);
+  }
+
+  viewDetail(filmId: number) {
+    this.router.navigate([`/details/${filmId}`]);
   }
 }

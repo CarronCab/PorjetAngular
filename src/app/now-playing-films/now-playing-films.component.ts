@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmsService } from '../services/films.service';
 import { Film } from '../services/film.interface';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-now-playing-films',
@@ -9,7 +10,7 @@ import { Film } from '../services/film.interface';
 })
 export class NowPlayingFilmsComponent implements OnInit {
   nowplaying: Film[] = [];
-  constructor(private filmService: FilmsService) {}
+  constructor(private filmService: FilmsService, private router: Router) {}
 
   ngOnInit() {
     this.filmService.getnowPLaying().subscribe((res: any) => {
@@ -19,5 +20,8 @@ export class NowPlayingFilmsComponent implements OnInit {
         this.nowplaying.push(element);
       });
     });
+  }
+  viewDetail(filmId: number) {
+    this.router.navigate([`/details/${filmId}`]);
   }
 }
