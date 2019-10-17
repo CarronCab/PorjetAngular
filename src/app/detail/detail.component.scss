@@ -1,1 +1,43 @@
+.detail-content-container {
+  margin: 15px 15px 0 15px;
+  color: white;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
 
+.mat-h1 {
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.detail-content-sub-container {
+  margin-top: 20px;
+  background-color: black;
+}
+
+.left-side-container {
+  width: 50%;
+  padding: 0 10px 0 10px;
+  background-color: black;
+}
+
+.right-side-container {
+  min-height: 460px;
+  padding: 0 10px 0 10px;
+}
+
+.space-before-trailer {
+  margin-bottom: 32px;
+}
+
+.description {
+  line-height: 1;
+}
+
+.sub-title {
+  font-weight: bold;
+  display:inline-block;
+}
+
+.genres-list {
+  display:inline-block;
+}
