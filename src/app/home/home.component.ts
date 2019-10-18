@@ -63,4 +63,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.mySubscription.unsubscribe();
     }
   }
+
+  viewDetail(filmId: number) {
+    this.router.navigate([`/details/${filmId}`]);
+  }
 }

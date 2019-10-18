@@ -5,7 +5,7 @@
 </div>
 
 <mat-grid-list cols="7" rowHeight="2:3">
-  <mat-grid-tile *ngFor="let film of popular">
+  <mat-grid-tile *ngFor="let film of popular" (click)="viewDetail(film.id)">
     <img
       class="tile_image"
       src="https://image.tmdb.org/t/p/w500/{{ film.poster_path }}"
