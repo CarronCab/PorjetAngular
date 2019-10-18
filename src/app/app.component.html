@@ -62,7 +62,7 @@
       mat-button
       routerLink="/category"
       routerLinkActive="active"
-      *ngIf="!(router.url === '/category')"
+      *ngIf="!(router.url === '/category' || router.url.includes('/genre/'))"
     >
       Catégories
     </button>
