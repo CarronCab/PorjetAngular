@@ -11,7 +11,7 @@
         <p class="sub-title">Date de sortie :</p>
         &nbsp;{{actualMovie.release_date}}
       </div>
-      <youtube-player class="trailer"
+      <youtube-player *ngIf="actualVideo" class="trailer"
         [videoId]="actualVideo.results[0].key" width="100%">
       </youtube-player>
     </mat-drawer>
