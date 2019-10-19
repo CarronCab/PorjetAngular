@@ -3,7 +3,7 @@
   <p class="genres-list" *ngFor="let genre of actualMovie.genres">{{genre.name}} &nbsp;</p>
   <mat-drawer-container class="detail-content-sub-container">
     <mat-drawer class="left-side-container" mode="side" opened>
-      <div>
+      <div *ngIf="actualMovie.vote_average !== 0">
         <p class="sub-title">Avis du public :</p>
         &nbsp;{{actualMovie.vote_average}}/10
       </div>
@@ -20,11 +20,11 @@
         <p class="sub-title">Titre original :</p>
         &nbsp;{{actualMovie.original_title}} ({{actualMovie.original_language}})
       </div>
-      <div>
+      <div *ngIf="actualMovie.budget !== 0">
         <p class="sub-title">Budget :</p>
         &nbsp;{{actualMovie.budget}} $
       </div>
-      <div>
+      <div *ngIf="actualMovie.revenue !== 0">
         <p class="sub-title">Recette :</p>
         &nbsp;{{actualMovie.revenue}} $
       </div>
